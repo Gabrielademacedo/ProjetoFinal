@@ -1,0 +1,19 @@
+<app-header-inicial></app-header-inicial>
+<main>
+  <div class="container textos">
+    <h1 class="text-center">
+      Descubra o mundo dos carros Ford, desde os clássicos até os modelos mais
+      recentes.
+    </h1>
+  </div>
+  <div class="card-carros container d-flex justify-content-center">
+    <ng-container *ngFor="let item of items">
+      <app-cards-carros
+        [imagem]="item.imagem"
+        [descricao]="item.titulo"
+        [titulo]="item.modelo"
+      ></app-cards-carros>
+    </ng-container>
+  </div>
+</main>
+<app-footer></app-footer>

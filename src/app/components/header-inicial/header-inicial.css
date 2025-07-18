@@ -1,0 +1,19 @@
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.btn {
+  border: 1px solid #1b357e;
+  color: #1b357e;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1b357e;
+  color: white;
+}
