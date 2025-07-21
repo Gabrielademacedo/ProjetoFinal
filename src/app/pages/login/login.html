@@ -1,6 +1,47 @@
 <main>
   <section class="container-form-login">
-  
+    <div class="carousel-wrapper">
+      <ngb-carousel
+        class="carousel-login"
+        [interval]="3000"
+        [pauseOnHover]="false"
+        [showNavigationArrows]="false"
+        [showNavigationIndicators]="true"
+      >
+        <ng-template ngbSlide>
+          <div class="text-slide">
+            <h3>Portal Inteligente do Proprietário</h3>
+            <p>
+              A nova plataforma foi criada para que você tenha total controle
+              sobre sua frota, com informações acessíveis e em tempo real. Tudo
+              em um só lugar, com praticidade, segurança e tecnologia.
+            </p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="text-slide">
+            <h3>Monitore em tempo real</h3>
+            <p>
+              Com nosso sistema de rastreamento inteligente, você acompanha a
+              localização exata dos veículos, visualiza o odômetro atualizado,
+              verifica o status operacional e toma decisões com base em dados
+              precisos.
+            </p>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <div class="text-slide">
+            <h3>Atualizações inteligentes</h3>
+            <p>
+              Receba notificações automáticas sobre atualizações de software e
+              manutenção preventiva, garantindo que sua frota esteja sempre em
+              dia com o que há de mais moderno em conectividade veicular.
+            </p>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+
     <form class="form-login" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
       <img class="logo-ford" src="img/ford.png" alt="" />
       <h1 class="title">Boas-vindas</h1>

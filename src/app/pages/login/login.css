@@ -4,12 +4,37 @@
   height: 100vh;
   align-items: center;
   justify-content: space-evenly;
-  background-color: white;
+  background: linear-gradient(to right, #503c75, #6e5799);
 }
 
-.carro {
-  width: 700px;
-  filter: opacity(0.8);
+.carousel-wrapper {
+  width: 600px;
+  color: #402a5c;
+  transition: all 0.4s;
+}
+
+.carousel-wrapper:hover {
+  transform: scale(1.1);
+}
+
+.text-slide {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.text-slide h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-slide p {
+  font-size: 1.2rem;
 }
 
 .title {
@@ -20,11 +45,23 @@
 
 .form-login {
   display: flex;
+  width: 400px;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 10px;
+}
+.position-relative {
+  display: flex;
+  flex-direction: column;
 }
 
+.position-relative {
+  display: flex;
+  flex-direction: column;
+}
 .logo-ford {
   width: 150px;
   margin-bottom: 3rem;
