@@ -8,6 +8,7 @@ interface Carros {
   imagem: string;
   modelo: string;
   titulo: string;
+  link: string;
 }
 
 @Component({
@@ -19,24 +20,31 @@ interface Carros {
 export class IndexPage {
   items: Carros[] = [
     {
-      imagem: "img/broncoSport.png",
-      modelo: "Ford Bronco Sport 2022",
-      titulo: "Aventura, robustez e desempenho em qualquer terreno.",
+      imagem: "cards-carros/bronco.png",
+      modelo: "Novo Bronco Sport",
+      titulo:
+        "Design robusto e inconfundível, Tração 4x4 de série com uma capacidade off-road excepcional, tecnologia moderna, conectividade e segurança para superar todo tipo de terreno.",
+      link: "https://www.ford.com.br/suvs-e-crossovers/bronco-sport/",
     },
     {
-      imagem: "img/mustang.png",
-      modelo: "Ford Mustang",
-      titulo: "Design icônico, potência e emoção em cada curva.",
+      imagem: "cards-carros/mustang.png",
+      modelo: "Mustang GT Performance",
+      titulo:
+        "Potência, torque, tecnologia e conectividade como você nunca viu.",
+      link: "https://www.ford.com.br/performance/mustang/",
     },
     {
-      imagem: "img/ranger.png",
-      modelo: "Ford Ranger 2022",
-      titulo: "Força, tecnologia e versatilidade para todos os caminhos.",
+      imagem: "cards-carros/ranger.png",
+      modelo: "Nova Geração Ranger",
+      titulo:
+        "Robustez, Tecnologia e Novas Experiências Ford. A revolução do segmento.",
+      link: "https://www.ford.com.br/picapes/ranger/",
     },
     {
-      imagem: "img/territory.png",
-      modelo: "Ford Territory",
-      titulo: "Conforto, sofisticação e conectividade em um SUV inteligente.",
+      imagem: "cards-carros/territory.png",
+      modelo: "Novo Territory",
+      titulo: "O design que você não esperava.",
+      link: "https://www.ford.com.br/suvs-e-crossovers/territory/",
     },
   ];
 
