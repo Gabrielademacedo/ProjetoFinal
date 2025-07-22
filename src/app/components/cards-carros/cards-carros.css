@@ -1,8 +1,9 @@
 .card {
-  width: 300px;
+  width: 100%;
+  max-width: 350px;
   height: 450px;
   border: none;
-  box-shadow: 1px 1px 10px #000;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,10 +14,11 @@
 
 .card:hover {
   transform: scale(1.03);
+  box-shadow: #ffffff 0px 0px 10px;
 }
 
 .btn-primary {
-  background-color: #1b357e;
+  background-color: #1a45bb;
   transition: all 0.3s ease;
 }
 
@@ -33,10 +35,17 @@
 }
 
 .card-title {
-  color: #1b357e;
+  color: #1a45bb;
   font-weight: bold;
 }
 
 .card-text {
   font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 300px;
+    max-width: 400px;
+  }
 }

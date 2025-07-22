@@ -1,23 +1,23 @@
-export interface Veiculos extends Array<Veiculo> {}
-
 export interface Veiculo {
   id: number | string;
-  vehicle: string;
-  volumetotal: number | string;
-  connected: number | string;
-  softwareUpdates: number | string;
-  img: string;
-}
-
-export interface VeiculoData {
-  id: number;
+  nomeModelo: string;
+  placa: string;
+  chassi: string;
+  anoFabricacao: number;
+  cor: string;
+  imagem: string;
+  autonomia: number;
   odometro: number;
   nivelCombustivel: number;
-  status: string;
-  lat: number;
-  long: number;
-}
+  statusVeiculo: "Ativo" | "Em manutenção" | "Offline";
+  ultimaRevisao: string;
+  proximaRevisao: string;
 
-export interface VeiculosAPI {
-  vehicles: Veiculos;
+  conectado: boolean;
+  atualizacoesPendentes: number;
+
+  localizacao: {
+    lat: number;
+    long: number;
+  };
 }
