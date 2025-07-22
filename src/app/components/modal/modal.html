@@ -1,0 +1,85 @@
+<!-- BACKDROP -->
+<div class="details-backdrop" (click)="closeModal()"></div>
+
+<!-- LOCALIZAÇÃO DO VEÍCULO -->
+<div
+  class="details-container bg-white rounded shadow-lg p-4 p-md-5"
+  *ngIf="localizacao === true"
+>
+  <div>
+    <button
+      class="btn-close float-end"
+      (click)="closeModal()"
+      aria-label="Fechar"
+    ></button>
+
+    <h3 class="fw-bold text-primary text-center mb-4 fs-2">
+      Localização do Veículo
+    </h3>
+
+    <p class="text-center mb-4 fs-5">
+      Veja abaixo a última localização registrada do seu veículo:
+    </p>
+
+    <div class="d-flex justify-content-center">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1084.2416910874472!2d-46.68696213036721!3d-23.597463369711075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce57b66d732c4f%3A0x10d235a722318f7a!2sFord%20Brasil!5e1!3m2!1spt-BR!2sbr!4v1753152834955!5m2!1spt-BR!2sbr"
+        width="100%"
+        height="400"
+        style="border: 0; border-radius: 10px"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- HISTÓRICO DE SERVIÇOS -->
+<div
+  class="details-container bg-white rounded shadow-lg p-4 p-md-5"
+  *ngIf="servicos === true"
+>
+  <div>
+    <button
+      class="btn-close float-end"
+      (click)="closeModal()"
+      aria-label="Fechar"
+    ></button>
+
+    <h3 class="fw-bold text-primary text-center mb-4 fs-2">
+      Histórico de Serviços
+    </h3>
+
+    <p class="text-center mb-4 fs-5">
+      O seu <strong>Ford</strong> ainda não passou por nenhum serviço, pois
+      possui apenas <strong>1.234 km</strong> rodados. Fique tranquilo, a
+      primeira revisão está programada para os <strong>10.000 km</strong> ou 12
+      meses.
+    </p>
+
+    <ul class="list-group list-group-flush fs-5">
+      <li
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        <div>
+          <h5 class="mb-1 fw-bold">Pré-entrega (PDI)</h5>
+          <small class="text-muted fs-6">Realizada em: 02/07/2025</small>
+        </div>
+        <span class="badge bg-success fs-6">Concluído</span>
+      </li>
+
+      <li
+        class="list-group-item d-flex justify-content-between align-items-center"
+      >
+        <div>
+          <h5 class="mb-1 fw-bold">1ª revisão</h5>
+          <small class="text-muted fs-6"
+            >Prevista para: 02/07/2026 ou 10.000 km</small
+          >
+        </div>
+        <span class="badge bg-secondary fs-6">Pendente</span>
+      </li>
+    </ul>
+  </div>
+</div>
