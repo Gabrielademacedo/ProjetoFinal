@@ -1,0 +1,78 @@
+<div class="vehicle-details-backdrop" (click)="closeDetails()"></div>
+
+<div class="vehicle-details-container bg-white rounded shadow-lg p-4 p-md-5">
+  <ngb-alert
+    *ngIf="mensagem"
+    [type]="mensagem.includes('sucesso') ? 'success' : 'danger'"
+    [dismissible]="false"
+    class="alert-custom mb-4"
+    [innerHTML]="mensagem"
+  ></ngb-alert>
+  <div>
+    <button
+      class="btn-close float-end"
+      (click)="closeDetails()"
+      aria-label="Fechar"
+    ></button>
+
+    <h3 class="fw-bold text-primary text-center mb-4">
+      Agendamento de Serviço
+    </h3>
+  </div>
+
+  <div class="row g-4 d-flex justify-content-around">
+    <div class="col-md-6" style="width: 260px">
+      <label class="form-label fw-semibold mb-2">Escolha a data:</label>
+
+      <ngb-datepicker
+        class="custom-datepicker w-100"
+        [minDate]="{ year: 2025, month: 7, day: 22 }"
+        [startDate]="{ year: 2025, month: 7 }"
+        (dateSelect)="onDateSelect($event)"
+        [displayMonths]="1"
+        outsideDays="hidden"
+        navigation="select"
+      ></ngb-datepicker>
+    </div>
+
+    <div class="col-md-6" style="width: 260px">
+      <div class="mb-2">
+        <h5 class="fw-bold text-primary mb-3">Próximas Revisões Sugeridas</h5>
+        <ul class="list-group list-group-flush">
+          <li *ngFor="let rev of revisoesSugeridas" class="list-group-item">
+            <span class="fw-semibold">{{
+              rev.data | date : "dd/MM/yyyy"
+            }}</span>
+            - {{ rev.descricao }}
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 class="fw-bold text-primary mb-2">Escolha sua Oficina</h5>
+        <div class="custom-select-wrapper">
+          <ng-select
+            [items]="oficinasFord"
+            bindLabel="nome"
+            [(ngModel)]="oficinaSelecionada"
+            class="ng-select-bootstrap w-100"
+          >
+            <ng-template ng-option-tmp let-oficina="item">
+              <div>
+                <strong>{{ oficina.nome }}</strong
+                ><br />
+                <small>{{ oficina.endereco }}</small>
+              </div>
+            </ng-template>
+          </ng-select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-4">
+    <button class="btn btn-primary px-5 py-2 fw-semibold" (click)="agendar()">
+      Agendar Serviço
+    </button>
+  </div>
+</div>
