@@ -1,0 +1,138 @@
+.main-form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.alert-custom {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  z-index: 1000;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.logo-ford {
+  width: 140px;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  color: #1b357e;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.input-custom {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.lgpd {
+  font-size: 0.85rem;
+  margin: 1rem 0;
+  text-align: justify;
+  color: #555;
+  width: 100%;
+}
+
+.lgpd .tec {
+  color: #1a45bb;
+  text-decoration: underline;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: #1a45bb;
+  border: none;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+  background-color: #1f346d;
+}
+
+.text-danger {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  .form-login {
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .alert-custom {
+    top: 1rem;
+    width: 95%;
+  }
+
+  .lgpd {
+    font-size: 0.8rem;
+  }
+
+  .checkbox-group {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo-ford {
+    width: 100px;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+}
