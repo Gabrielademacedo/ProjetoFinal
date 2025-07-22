@@ -1,44 +1,25 @@
-.imagem-carro {
-  width: 800px;
-  
-
-}
-
 .card {
-  width: 15rem;
+  border: none;
+  transition: transform 0.2s ease;
 }
 
-.formulario {
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.formulario select {
-  width: 100%;
-  max-width: 400px;
-  border-radius: 5px;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-}
-
-.formulario label {
-  text-align: center;
+.text {
+  color: #ffffff;
   font-weight: bold;
-  color: #1b357e;
+  font-size: 1.2rem;
 }
 
-.formulario input {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
+.infos {
+  color: #fff;
+  border-radius: 10px;
+  background: #2c2ab2;
+  box-shadow: 25px 25px 51px #252497, -25px -25px 51px #3330cd;
 }
 
-button {
-  background-color: #503c75;
-}
-
-button:hover {
-  background-color: #402a5c;
+.infos h5 {
+  font-weight: 300;
 }

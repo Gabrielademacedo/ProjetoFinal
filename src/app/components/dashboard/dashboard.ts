@@ -1,66 +1,73 @@
-import { Component, OnInit } from '@angular/core';
-import { DashboardService } from '../../services/dashboard.service';
-import { Veiculo, VeiculoData } from '../../models/veiculo.model';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-import { Card } from '../card/card';
-import { Table } from '../table/table';
-import { catchError, of } from 'rxjs';
+import { Component, OnInit } from "@angular/core";
+import { Veiculo } from "../../models/veiculo.model";
+import { ReactiveFormsModule } from "@angular/forms";
+import { CommonModule } from "@angular/common";
+import { VehicleDetails } from "../vehicle-details/vehicle-details";
+import { Modal } from "../modal/modal";
+import { ModalService } from "../../services/modal.service";
 
 @Component({
-  selector: 'app-dashboard',
-  imports: [ReactiveFormsModule, CommonModule, Card, Table],
-  templateUrl: './dashboard.html',
-  styleUrl: './dashboard.css',
+  selector: "app-dashboard",
+  imports: [ReactiveFormsModule, CommonModule, VehicleDetails, Modal],
+  templateUrl: "./dashboard.html",
+  styleUrl: "./dashboard.css",
 })
 export class Dashboard implements OnInit {
-  vehicles: Veiculo[] = [];
-  selectedVehicle!: Veiculo;
-  vehicleData!: VeiculoData;
+  vehicleData!: Veiculo;
   errorMessage?: string;
+  showDetails = false;
+  showModal = false;
 
-  selectCarForms = new FormGroup({
-    carId: new FormControl(''),
-  });
+  modalLocalizacao = false;
+  modalServicos = false;
 
-  vinForm = new FormGroup({
-    vin: new FormControl(''),
-  });
-
-  constructor(private dashboardService: DashboardService) {}
+  constructor(private modalService: ModalService) {}
 
   ngOnInit(): void {
-    this.dashboardService.getVehicles().subscribe((res) => {
-      this.vehicles = res.vehicles;
-      const firstId = this.vehicles[0]?.id;
-      this.selectCarForms.controls.carId.setValue(firstId.toString());
-      this.selectedVehicle = this.vehicles[0];
-    });
+    this.vehicleData = {
+      id: 1,
+      nomeModelo: "Mustang GT Performance V8 5.0L 2025",
+      placa: "RDE4B12",
+      chassi: "9BWZZZ377VT004251",
+      anoFabricacao: 2025,
+      cor: "Preto Astúrias",
+      imagem: "img/mustangprop.png",
 
-    this.selectCarForms.controls.carId.valueChanges.subscribe((id) => {
-      this.selectedVehicle = this.vehicles[Number(id) - 1];
-      console.log(this.selectedVehicle);
+      odometro: 1.234, // em km
+      nivelCombustivel: 42, // em %
+      autonomia: 128, // em km
+      statusVeiculo: "Ativo",
+      ultimaRevisao: "2025-05-10",
+      proximaRevisao: "2025-11-10",
+
+      conectado: true,
+      atualizacoesPendentes: 3,
+
+      localizacao: {
+        lat: -23.564,
+        long: -46.654,
+      },
+    };
+
+    this.modalService.openModal$.subscribe((data) => {
+      this.modalLocalizacao = data.localizacao;
+      this.modalServicos = data.servicos;
+      this.openModal();
     });
   }
+  openDetails() {
+    this.showDetails = true;
+  }
 
-  consultarDadosPorVin() {
-    const vin = this.vinForm.controls.vin.value;
-    this.errorMessage = '';
-    if (vin) {
-      this.dashboardService
-        .getVehicleData(vin)
-        .pipe(
-          catchError((error) => {
-            this.errorMessage =
-              'Erro ao buscar dados do veículo: ' +
-              (error?.error?.message || 'Erro desconhecido');
-            this.vehicleData = undefined!;
-            return of(null);
-          })
-        )
-        .subscribe((data) => {
-          if (data) this.vehicleData = data;
-        });
-    }
+  closeDetails() {
+    this.showDetails = false;
+  }
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  closeModal() {
+    this.showModal = false;
   }
 }
