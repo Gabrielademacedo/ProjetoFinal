@@ -8,6 +8,27 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.alert-backdrop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-alert-box {
+  max-width: 600px;
+  width: 90%;
+  border-left: 5px solid;
+  position: relative;
+}
+
 .vehicle-details-container {
   position: fixed;
   top: 50%;

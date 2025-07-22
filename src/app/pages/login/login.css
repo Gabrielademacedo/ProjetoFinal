@@ -95,7 +95,6 @@ button:hover {
   background-color: #1f346d;
 }
 
-/* Responsividade */
 @media screen and (max-width: 768px) {
   .container-form-login {
     flex-direction: column;

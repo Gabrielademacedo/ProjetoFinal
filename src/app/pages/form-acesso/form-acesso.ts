@@ -21,7 +21,7 @@ import { NgbAlertConfig, NgbAlertModule } from "@ng-bootstrap/ng-bootstrap";
 export class FormAcesso implements OnInit {
   formLogin!: FormGroup;
   errorMessage = "";
-  success = false; // <-- Novo estado para exibir alerta
+  success = false;
 
   constructor(
     private fb: FormBuilder,
@@ -52,16 +52,19 @@ export class FormAcesso implements OnInit {
     if (cpf && email) {
       this.errorMessage = "";
       this.success = true;
-
-      // simulação de envio de email...
-      setTimeout(() => {
-        this.success = false;
-        this.router.navigate(["/login"]);
-      }, 3000); // espera 3s antes de redirecionar
     } else {
       this.success = false;
       this.errorMessage = "CPF ou e-mail inválidos.";
     }
+  }
+
+  voltar() {
+    this.router.navigate(["/login"]);
+  }
+
+  closeAlert() {
+    this.router.navigate(["/login"]);
+    this.success = false;
   }
 
   ngOnDestroy() {

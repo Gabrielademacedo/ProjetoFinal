@@ -93,30 +93,31 @@ export class VehicleDetails {
   }
 
   agendar() {
-    if (!this.selectedDate) {
-      this.mensagem = "Selecione uma data para agendar o serviço.";
-      return;
-    }
-
-    if (!this.oficinaSelecionada) {
-      this.mensagem = "Selecione uma oficina.";
-      return;
-    }
-
-    const nomeOficina = this.oficinaSelecionada.nome;
-    const endereco = this.oficinaSelecionada.endereco;
-    const dataFormatada = `${this.selectedDate.day
-      .toString()
-      .padStart(2, "0")}/${this.selectedDate.month
-      .toString()
-      .padStart(2, "0")}/${this.selectedDate.year}`;
-
-    this.mensagem = `Solicitação de agendamento realizado com sucesso para o dia <strong>${dataFormatada}</strong> na oficina <strong>${nomeOficina}</strong>, localizada em <strong>${endereco}</strong>. Mais informações serão enviadas para o seu e-mail.`;
-
     setTimeout(() => {
-      this.mensagem = "";
-      this.closeDetails();
-    }, 4000);
+      if (!this.selectedDate) {
+        this.mensagem = "Selecione uma data para agendar o serviço.";
+        return;
+      }
+
+      if (!this.oficinaSelecionada) {
+        this.mensagem = "Selecione uma oficina.";
+        return;
+      }
+
+      const nomeOficina = this.oficinaSelecionada.nome;
+      const endereco = this.oficinaSelecionada.endereco;
+      const dataFormatada = `${this.selectedDate.day
+        .toString()
+        .padStart(2, "0")}/${this.selectedDate.month
+        .toString()
+        .padStart(2, "0")}/${this.selectedDate.year}`;
+
+      this.mensagem = `Solicitação de agendamento realizado com sucesso para o dia <strong>${dataFormatada}</strong> na oficina <strong>${nomeOficina}</strong>, localizada em <strong>${endereco}</strong>. Mais informações serão enviadas para o seu e-mail.`;
+    }, 500);
+  }
+
+  voltar() {
+    this.closeDetails();
   }
 
   onDateSelect(date: NgbDate) {
