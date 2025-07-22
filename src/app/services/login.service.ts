@@ -1,12 +1,11 @@
-import { HttpClient } from '@angular/common/http';
-import { inject, Injectable } from '@angular/core';
-import { Usuario } from '../models/usuario.model';
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: "root",
 })
 export class LoginService {
-  private baseUrl = 'http://localhost:3001';
+  private baseUrl = "http://localhost:3001";
 
   constructor(private http: HttpClient) {}
 
