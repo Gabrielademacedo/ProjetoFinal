@@ -74,9 +74,13 @@ export class Login implements OnInit {
         nome: this.usuario.nome,
         email: this.usuario.email,
       });
-      this.router.navigate(["/welcome"]);
+      this.router.navigate(["/dashboard"]);
     } else {
       this.errorMessage = "Usuário ou senha inválidos.";
     }
+  }
+
+  goToCadastro() {
+    this.router.navigate(["/cadastro"]);
   }
 }

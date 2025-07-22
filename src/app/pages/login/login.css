@@ -1,20 +1,25 @@
 .container-form-login {
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   align-items: center;
   justify-content: space-evenly;
-  background: linear-gradient(to right, #503c75, #6e5799);
+  background: linear-gradient(to right, #1b357e, #2258ec);
+  padding: 2rem 1rem;
+  box-sizing: border-box;
 }
 
 .carousel-wrapper {
   width: 600px;
-  color: #402a5c;
+  max-width: 90vw;
   transition: all 0.4s;
+  margin-bottom: 2rem;
+  gap: 2rem;
 }
 
 .carousel-wrapper:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .text-slide {
@@ -39,57 +44,95 @@
 
 .title {
   font-size: 2rem;
-  color: #503c75;
+  color: #1b357e;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .form-login {
   display: flex;
   width: 400px;
+  max-width: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #fff;
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-.position-relative {
-  display: flex;
-  flex-direction: column;
+
+.form-login input {
+  width: 100% !important;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .position-relative {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  position: relative;
 }
+
+.toggle-password {
+  position: absolute;
+  top: 38px;
+  right: 10px;
+  cursor: pointer;
+}
+
 .logo-ford {
-  width: 150px;
-  margin-bottom: 3rem;
+  width: 120px;
+  margin-bottom: 2rem;
 }
 
 button {
-  background-color: #503c75;
+  background-color: #1a45bb;
+  width: 100%;
 }
 
 button:hover {
-  background-color: #402a5c;
+  background-color: #1f346d;
 }
 
+/* Responsividade */
 @media screen and (max-width: 768px) {
   .container-form-login {
     flex-direction: column;
-    align-items: center;
     justify-content: center;
   }
 
-  .carro {
+  .carousel-wrapper {
     width: 100%;
-    margin-left: 0;
+    max-width: 100%;
     margin-bottom: 2rem;
   }
 
   .form-login {
     width: 100%;
-    margin-right: 0;
+    padding: 1.5rem;
+  }
+
+  .text-slide h3 {
+    font-size: 1.5rem;
+  }
+
+  .text-slide p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .logo-ford {
+    width: 100px;
+  }
+
+  .toggle-password {
+    top: 34px;
+    right: 8px;
   }
 }

@@ -13,7 +13,7 @@
             <h3>Portal Inteligente do Proprietário</h3>
             <p>
               A nova plataforma foi criada para que você tenha total controle
-              sobre sua frota, com informações acessíveis e em tempo real. Tudo
+              sobre seu carro, com informações acessíveis e em tempo real. Tudo
               em um só lugar, com praticidade, segurança e tecnologia.
             </p>
           </div>
@@ -34,7 +34,7 @@
             <h3>Atualizações inteligentes</h3>
             <p>
               Receba notificações automáticas sobre atualizações de software e
-              manutenção preventiva, garantindo que sua frota esteja sempre em
+              manutenção preventiva, garantindo que seu carro esteja sempre em
               dia com o que há de mais moderno em conectividade veicular.
             </p>
           </div>
@@ -46,7 +46,7 @@
       <img class="logo-ford" src="img/ford.png" alt="" />
       <h1 class="title">Boas-vindas</h1>
 
-      <div class="mb-3">
+      <div class="mb-3 position-relative">
         <label for="exampleInputEmail1" class="form-label">Login</label>
         <input
           type="text"
@@ -81,8 +81,12 @@
             display: flex;
           "
         >
-          <a href="#">Primeiro Acesso?</a>
-          <a href="#">Esqueceu a senha?</a>
+          <a style="cursor: pointer" (click)="goToCadastro()"
+            >Primeiro Acesso?</a
+          >
+          <a style="cursor: pointer" (click)="goToCadastro()"
+            >Esqueceu a senha?</a
+          >
         </div>
       </div>
       <div
