@@ -46,6 +46,20 @@ export class IndexPage {
       titulo: "O design que você não esperava.",
       link: "https://www.ford.com.br/suvs-e-crossovers/territory/",
     },
+    {
+      imagem: "cards-carros/mustangeletrico.png",
+      modelo: "Mustang Mach-E",
+      titulo:
+        "Performance, tecnologia e design que só um ícone como o Mustang pode oferecer.",
+      link: "https://www.ford.com.br/performance/mustang-mach-e/",
+    },
+    {
+      imagem: "cards-carros/furgao.png",
+      modelo: "Transit Furgão",
+      titulo:
+        "A Transit Furgão tem mais tecnologia, conectividade, performance, segurança e conforto para você e o seu negócio.",
+      link: "https://www.ford.com.br/veiculos-comerciais/transit-furgao/",
+    },
   ];
 
   ngOnInit() {

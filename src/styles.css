@@ -18,13 +18,7 @@ main {
 }
 
 body.index-bg {
-  background-image: url("../public/img/mustangantigo.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  background-blend-mode: darken;
+  background: linear-gradient(to right, #1b357e, #2258ec);
 }
 
 body.index-bg footer {
