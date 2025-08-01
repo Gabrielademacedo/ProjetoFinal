@@ -1,9 +1,9 @@
 
-# 🚗 Projeto Final - Dashboard Ford (Angular + Bootstrap)
+#  PIP - Portal Inteligente do Proprietário Ford (Angular + Bootstrap)
 
 Este projeto é uma aplicação web desenvolvida com **Angular** e **Bootstrap** que simula um painel de controle de um veículo Ford. A aplicação permite que o usuário visualize informações do carro, agende serviços de manutenção, acesse a localização do veículo e consulte o manual do usuário.
 
-## 🔐 Credenciais de Acesso
+##  Credenciais de Acesso
 
 Para acessar o sistema, utilize as seguintes credenciais de login:
 
@@ -12,15 +12,15 @@ Usuário: admin
 Senha: 123456
 ```
 
-## 🌐 Acesse o Projeto Online
+##  Acesse o Projeto Online
 
 Você pode acessar a versão hospedada do projeto através do Vercel:
 
 🔗 [pip-liart-tau.vercel.app](https://pip-liart-tau.vercel.app/)
 
-## 📷 Funcionalidades Demonstradas
+##  Funcionalidades Demonstradas
 
-### 📋 Dashboard Principal
+###  Dashboard Principal
 
 - Visualização das informações principais do veículo, como:
   - Odômetro
@@ -32,7 +32,7 @@ Você pode acessar a versão hospedada do projeto através do Vercel:
 
 ---
 
-### 🛠️ Agendamento de Serviço
+### 🛠 Agendamento de Serviço
 
 - Interface para escolha de data
 - Sugestões automáticas de próximas revisões
@@ -40,14 +40,14 @@ Você pode acessar a versão hospedada do projeto através do Vercel:
 
 ---
 
-### 📍 Localização do Veículo
+###  Localização do Veículo
 
 - Mapa exibindo a última localização registrada do veículo
 - Integração com Google Maps
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
 - **Angular** (v16+)
 - **Bootstrap**
@@ -55,7 +55,7 @@ Você pode acessar a versão hospedada do projeto através do Vercel:
 - **HTML5/CSS3**
 - **Google Maps Embed API**
 
-## 📁 Estrutura do Projeto (resumo)
+##  Estrutura do Projeto (resumo)
 
 ```
 src/
@@ -69,15 +69,7 @@ src/
 └── index.html
 ```
 
-## 🧑‍💻 Desenvolvedora
-
-Gabriela de Macedo  
-📧 gabriela@email.com  
-🔗 [GitHub](https://github.com/Gabrielademacedo/ProjetoFinal)
-
----
-
-## 🚀 Como Rodar Localmente
+##  Como Rodar Localmente
 
 ```bash
 # Clone o repositório
@@ -95,8 +87,7 @@ ng serve
 # Acesse em: http://localhost:4200
 ```
 
----
-
-## 📄 Licença
+##  Licença
 
 Este projeto foi desenvolvido para fins educacionais e demonstrativos.
+
