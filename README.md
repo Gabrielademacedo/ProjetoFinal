@@ -32,7 +32,7 @@ Você pode acessar a versão hospedada do projeto através do Vercel:
 
 ---
 
-### 🛠 Agendamento de Serviço
+###  Agendamento de Serviço
 
 - Interface para escolha de data
 - Sugestões automáticas de próximas revisões
@@ -90,4 +90,5 @@ ng serve
 ##  Licença
 
 Este projeto foi desenvolvido para fins educacionais e demonstrativos.
+
 
