@@ -1,59 +1,102 @@
-# ProjetoAngular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.5.
+# 🚗 Projeto Final - Dashboard Ford (Angular + Bootstrap)
 
-## Development server
+Este projeto é uma aplicação web desenvolvida com **Angular** e **Bootstrap** que simula um painel de controle de um veículo Ford. A aplicação permite que o usuário visualize informações do carro, agende serviços de manutenção, acesse a localização do veículo e consulte o manual do usuário.
 
-To start a local development server, run:
+## 🔐 Credenciais de Acesso
+
+Para acessar o sistema, utilize as seguintes credenciais de login:
+
+```
+Usuário: admin  
+Senha: 123456
+```
+
+## 🌐 Acesse o Projeto Online
+
+Você pode acessar a versão hospedada do projeto através do Vercel:
+
+🔗 [pip-liart-tau.vercel.app](https://pip-liart-tau.vercel.app/)
+
+## 📷 Funcionalidades Demonstradas
+
+### 📋 Dashboard Principal
+
+- Visualização das informações principais do veículo, como:
+  - Odômetro
+  - Combustível restante
+  - Status do veículo
+  - Número do chassi
+  - Próximo serviço agendado
+  - Link para o manual do usuário
+
+---
+
+### 🛠️ Agendamento de Serviço
+
+- Interface para escolha de data
+- Sugestões automáticas de próximas revisões
+- Seleção de oficina para atendimento
+
+---
+
+### 📍 Localização do Veículo
+
+- Mapa exibindo a última localização registrada do veículo
+- Integração com Google Maps
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Angular** (v16+)
+- **Bootstrap**
+- **TypeScript**
+- **HTML5/CSS3**
+- **Google Maps Embed API**
+
+## 📁 Estrutura do Projeto (resumo)
+
+```
+src/
+├── app/
+│   ├── components/
+│   ├── pages/
+│   ├── services/
+│   └── app.module.ts
+├── assets/
+│   └── screenshots/
+└── index.html
+```
+
+## 🧑‍💻 Desenvolvedora
+
+Gabriela de Macedo  
+📧 gabriela@email.com  
+🔗 [GitHub](https://github.com/Gabrielademacedo/ProjetoFinal)
+
+---
+
+## 🚀 Como Rodar Localmente
 
 ```bash
+# Clone o repositório
+git clone https://github.com/Gabrielademacedo/ProjetoFinal
+
+# Acesse a pasta do projeto
+cd ProjetoFinal
+
+# Instale as dependências
+npm install
+
+# Rode a aplicação
 ng serve
+
+# Acesse em: http://localhost:4200
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+## 📄 Licença
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Este projeto foi desenvolvido para fins educacionais e demonstrativos.
